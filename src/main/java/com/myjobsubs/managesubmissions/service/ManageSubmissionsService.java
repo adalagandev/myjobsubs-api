@@ -7,5 +7,8 @@ import java.util.List;
 
 public interface ManageSubmissionsService {
 
-    List<SubmissionEntity> getAllMySubmissions() throws ManageSubmissionException;
+    List<SubmissionEntity> getAllMySubmissions();
+
+    void addSubmission(SubmissionEntity submission);
+
 }

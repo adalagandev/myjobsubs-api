@@ -6,6 +6,10 @@ import javax.persistence.*;
 @Table(name="SUBMISSIONS_T")
 public class SubmissionEntity {
 //job title, base salary, benefits, candidate's special requirement
+    public SubmissionEntity(){
+
+    }
+    public SubmissionEntity(String jobTitle, Long maxBaseSalary, String jobUrl){}
     @Id
     @GeneratedValue
     private Long submissionId;
@@ -15,6 +19,18 @@ public class SubmissionEntity {
 
     @Column(name="max_base_salary")
     private Long maxBaseSalary;
+
+    @Column(name="job_url")
+    private String jobUrl;
+
+    public String getJobUrl() {
+        return jobUrl;
+    }
+
+    public void setJobUrl(String jobUrl) {
+        this.jobUrl = jobUrl;
+    }
+
 
 
     public Long getSubmissionId() {
